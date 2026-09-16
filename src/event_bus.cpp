@@ -23,10 +23,11 @@ bool EventBus::unsubscribe(const std::string& event_name, SubscriptionId id) {
     auto& entries = it->second;
     const auto old_size = entries.size();
     std::erase_if(entries, [id](const Subscription& sub) { return sub.id == id; });
+    const bool removed = entries.size() != old_size;
     if (entries.empty()) {
         handlers_.erase(it);
     }
-    return entries.size() != old_size;
+    return removed;
 }
 
 void EventBus::emit(const Event& event) const {
