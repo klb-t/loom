@@ -10,6 +10,8 @@ option(LOOM_USE_BUNDLED_SQLITE "Compile third_party/sqlite3.c into loom_core" OF
 
 add_library(loom_core
     src/db.cpp
+    src/db_messages.cpp
+    src/db_graph.cpp
     src/event_bus.cpp
 )
 add_library(loom::core ALIAS loom_core)
