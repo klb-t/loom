@@ -2,6 +2,14 @@
 
 Compatibility-first C++20 extraction of the reusable ChatADHD engine.
 
+This repository preserves the earlier standalone compatibility baseline.
+Active kernel development, the workbench, current reports and the synthetic
+walkthrough are maintained in [ChatADHD / Loom](https://github.com/klb-t/chatadhd).
+See the [current native kernel](https://github.com/klb-t/chatadhd/tree/main/loom),
+[project documentation](https://github.com/klb-t/chatadhd/tree/main/docs)
+and [Claude handoff](https://github.com/klb-t/chatadhd/blob/main/docs/HANDOFF_2026-10-02_TO_CLAUDE.md).
+The earlier source and its history remain available here.
+
 Loom is intentionally starting from the parts that have a concrete compatibility contract: the existing ChatADHD SQLite v4 data model and event semantics. The goal is to move reusable engine behavior behind a small native core without pretending that the current schema is the final ontology.
 
 ## Current state
